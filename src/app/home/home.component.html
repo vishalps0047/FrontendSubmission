@@ -1,0 +1,36 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand text-white">Assignment</a>
+  <button *ngIf ="isAdmin" class="btn btn-danger my-2 my-sm-0" (click)="addUser()">Add User</button>
+  <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
+</nav>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">User Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">UserType</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userDetails">
+      <th scope="row">{{ user.Id }}</th>
+      <td>{{ user.UserName}}</td>
+      <td>{{ user.Email}}</td>
+      <td>{{ user.UserType}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!--<div class="d-flex justify-content-between p-2">
+  <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize" (pageChange)="refreshusers()">
+  </ngb-pagination>
+
+  <select class="custom-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshusers()">
+    <option [ngValue]="2">2 items per page</option>
+    <option [ngValue]="4">4 items per page</option>
+    <option [ngValue]="6">6 items per page</option>
+  </select>
+</div>-->

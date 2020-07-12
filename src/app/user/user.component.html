@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <div class="wrapped-div">
+    <div class="row col-2">
+      <!--<h2 routerLink='/user/userlogin' routerLinkActive='active'>Sign In</h2>
+  <h2 routerLink='/user/adminlogin' routerLinkActive='active'>Sign Up</h2>-->
+      <button type="submit" class="btn btn-danger my-2 my-sm-0 ml-3" (click) ="userlogin()">User Login</button>
+      <button type="submit" class="btn btn-danger my-2 my-sm-0" (click) ="adminlogin()">Admin Login</button>
+    </div>
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
